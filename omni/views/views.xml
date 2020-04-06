@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="omni.list">
+      <field name="name">omni list</field>
+      <field name="model">omni.omni</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="omni.action_window">
+      <field name="name">omni window</field>
+      <field name="res_model">omni.omni</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="omni.action_server">
+      <field name="name">omni server</field>
+      <field name="model_id" ref="model_omni_omni"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="omni" id="omni.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="omni.menu_1" parent="omni.menu_root"/>
+    <menuitem name="Menu 2" id="omni.menu_2" parent="omni.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="omni.menu_1_list" parent="omni.menu_1"
+              action="omni.action_window"/>
+    <menuitem name="Server to list" id="omni" parent="omni.menu_2"
+              action="omni.action_server"/>
+-->
+  </data>
+</odoo>
